@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination Paradise</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- bootstrap cdn css -->
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #f5c2dc">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Destination Paradise</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                aria-expanded="false"
+              >
+                Destinations
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Beach Getaway</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Mountain Adventure</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="#">City Life Experience</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">More</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              id="package-search"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- carousel section -->
+    <div class="container">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide my-5"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/assets/image_1.jpg"
+              class="d-block w-100"
+              alt="image-1"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/image_2.jpg"
+              class="d-block w-100"
+              alt="image-2"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/image_3.jpg"
+              class="d-block w-100"
+              alt="image-3"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/image_4.jpg"
+              class="d-block w-100"
+              alt="image-4"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fourth slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/image_5.jpg"
+              class="d-block w-100"
+              alt="image-5"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fifth slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- home section -->
+      <div class="home container my-5" id="home">
+        <div class="row">
+          <!-- LEFT: FORM -->
+          <div class="home-form-section col-12 col-md-4 form-column">
+            <h2 class="form-title mb-4">Book Your Dream Vacation</h2>
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" />
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+
+                <div class="input-group">
+                  <select
+                    class="form-select"
+                    id="countryCode"
+                    style="max-width: 100px"
+                  ></select>
+
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phoneInput"
+                    placeholder="Enter phone number"
+                  />
+                  <small class="error-text" id="phoneError"></small>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Birthdate</label>
+                <input type="date" class="form-control" id="dobInput" />
+                <small class="error-text" id="dobError"></small>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">Marital Status</label>
+                <select class="form-select">
+                  <option selected>Single</option>
+                  <option>Married</option>
+                  <option>Divorced</option>
+                  <option>Widowed</option>
+                </select>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-module px-5">Submit</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="home-packages-section col-12 col-md-8">
+            <h2 class="section-title mb-4 text-center">
+              Explore Our Travel Packages
+            </h2>
+            <div class="packages-container">
+              <div class="row g-4" id="packages-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-container my-5 mx-5" id="about">
+        <h2 class="about-title text-center my-5">About Us</h2>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <img
+              src="/assets/image_2.jpg"
+              class="about-img img-fluid"
+              alt="img"
+            />
+          </div>
+          <div class="col-12 col-md-6 right-side">
+            <h2 class="mb-4 text-center">Welcome to Destination Paradise</h2>
+            <p class="text-center text-muted">
+              Your ultimate guide to unwinding in the most beautiful
+              destinations around the world. From secluded beaches to bustling
+              cities, we curate the best travel experiences tailored just for
+              you.
+            </p>
+            <button class="btn btn-module">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- bootstrap cdn js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
