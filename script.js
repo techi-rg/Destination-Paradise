@@ -32,7 +32,7 @@ function renderPackages ( data )
 
     if ( data.length === 0 )
     {
-        container.innerHTML = `<p class ="text-center">NO PACKAGE FOUND!!</p>`;
+        container.innerHTML = `<p class ="text-center fs-5">NO PACKAGE FOUND!!</p>`;
         return;
     }
 
