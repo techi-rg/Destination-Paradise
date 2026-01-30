@@ -36,15 +36,15 @@ function renderPackages(data) {
 
   data.forEach((pkg) => {
     const col = document.createElement("div");
-    col.className = "col-12 col-md-4";
+    col.className = "col-12 col-md-4 package";
     col.innerHTML = `
-        <div class=" package card h-100 text-center">
+        <div class="card h-100 text-center">
         <div class="card-body d-flex flex-column">
                <div class="image-container mb-3">
         <img src="${pkg.photo}" class="card-img-top" alt="${pkg.name}" />
         </div>
-        <h5 class="package-description package-name card-title">${pkg.name}</h5>
-        <p class="card-text"> ${pkg.description}</p>
+        <h5 class="package-name card-title">${pkg.name}</h5>
+        <p class="package-description card-text"> ${pkg.description}</p>
 
         <button class="book-now-btn btn btn-module mt-auto">
             Book Now
@@ -60,7 +60,7 @@ function renderPackages(data) {
 renderPackages(packages);
 
 // Search Event
-const searchInput = document.getElementById("package-search");
+const searchInput = document.getElementById("searchInput");
 
 searchInput.addEventListener("input", function () {
   const query = this.value.toLowerCase();
@@ -122,17 +122,23 @@ document.getElementById("birthday").addEventListener("change", function () {
 
 (() => {
   const form = document.querySelector("#bookingForm");
+  const successMessage = document.getElementById("successMessage");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // show bootstrap validation styles
+    form.classList.add("was-validated");
+
+    // ❌ invalid form
     if (!form.checkValidity()) {
-      form.classList.add("was-validated");
+      successMessage.classList.add("d-none");
       return;
     }
 
-    document.getElementById("successMessage").textContent =
-      "Thanks for your interest, our tour experts will get back to you shorty!";
+    // ✅ valid form
+    successMessage.classList.remove("d-none");
+
     form.reset();
     form.classList.remove("was-validated");
   });

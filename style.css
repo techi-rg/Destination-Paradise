@@ -48,7 +48,7 @@
 
 .carousel {
     margin-left: 3rem;
-    margin-right: 3 rem;
+    margin-right: 3rem;
 }
 
 
@@ -121,29 +121,34 @@
 
 
 @media (max-width: 768px) {
-    .form-column {
-        border-right: none;
-        padding-right: 0 !important;
-    }
+  .form-column {
+    border-right: none;
+    padding-right: 0 !important;
+  }
 
     .packages-container {
-        padding-left: 0;
-    }
+    padding-left: 0 !important;
+  }
 
-    .carousel {
-        margin-left: 0;
-        margin-right: 0;
-    }
 
-    .right-side {
-        margin-top: 30px !important;
-    }
+   .packages-container .row {
+    --bs-gutter-x: 0 !important;
+  }
+
+    .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .right-side {
+    margin-top:3rem !important;
+  }
+
 }
 
-
-
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .navbar-expand-lg .navbar-nav {
         margin: auto;
     }
 }
+
+
