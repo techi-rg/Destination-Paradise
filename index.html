@@ -189,7 +189,7 @@
           </div>
         </div>
         <button
-          class="carousel-control-prev"
+          class="carousel-control-prev previous-slide"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
@@ -198,7 +198,7 @@
           <span class="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          class="carousel-control-next next-slide"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
@@ -216,12 +216,12 @@
             <form class="needs-validation" novalidate id="bookingForm">
               <div class="mb-3">
                 <label class="form-label">Name</label>
-                <input type="text" class="form-control" required />
+                <input type="text" class="form-control" id="name" required />
               </div>
 
               <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" required />
+                <input type="email" class="form-control" id="email" required />
               </div>
 
               <div class="mb-3">
@@ -235,7 +235,7 @@
                   ></select>
 
                   <input
-                    type="tel"
+                    type="number"
                     class="form-control"
                     id="phone"
                     placeholder="Enter phone number"
@@ -243,26 +243,24 @@
                     pattern="[0-9]{10}"
                   />
                   <div class="invalid-feedback text-center fs-6">
-                    Please enter a valid 10-digit phone number.
+                 Please enter a valid 10-digit phone number. 
                   </div>
                 </div>
               </div>
 
               <div class="mb-3">
                 <label class="form-label">Birthdate</label>
-                <input type="date" class="form-control" id="dob"  required/>
+                <input type="date" class="form-control" id="birthday"  required/>
                 <div class="invalid-feedback text-center fs-6">
-                  You must be at least 18 years old.
+                 You must be at least 18 years old. 
                 </div>
               </div>
               <div class="mb-4">
                 <label class="form-label">Marital Status</label>
-                <select class="form-select" required>
+                <select class="form-select" id="martialStatus" required>
                   <option></option>
                   <option>Single</option>
                   <option>Married</option>
-                  <option>Divorced</option>
-                  <option>Widowed</option>
                 </select>
               </div>
               <div class="text-center">
@@ -285,14 +283,14 @@
       <div class="about-container my-5 mx-5" id="about">
         <h2 class="about-title text-center my-5">About Us</h2>
         <div class="row">
-          <div class="col-12 col-md-6">
+          <div class="about-img col-12 col-md-6">
             <img
               src="/assets/image_2.jpg"
-              class="about-img img-fluid"
+              class="img-fluid"
               alt="img"
             />
           </div>
-          <div class="col-12 col-md-6 right-side">
+          <div class="about-text col-12 col-md-6 right-side">
             <h2 class="mb-4 text-center">Welcome to Destination Paradise</h2>
             <p class="text-center text-muted">
               Your ultimate guide to unwinding in the most beautiful
