@@ -82,6 +82,7 @@ searchInput.addEventListener( "input", function ()
 // Form Validation
 
 const countryCodes = [
+{code:"", name:""},
 { code: "+1", name: "USA" },
 { code: "+1", name: "Canada" },
 { code: "+52", name: "Mexico" },
@@ -105,3 +106,47 @@ const countryCodes = [
 { code: "+54", name: "Argentina" },
 { code: "+56", name: "Chile" },
 ]
+
+
+const countrySelect = document.getElementById( "countryCode" );
+
+countryCodes.forEach( ( c ) =>
+{
+
+    const option = document.createElement( "option" );
+    option.value = c.code;
+    option.textContent = `${ c.name } ${c.code}`;
+    countrySelect.appendChild( option );
+    
+} );
+
+
+document.getElementById("dob").addEventListener("change", function () {
+  const dob = new Date(this.value);
+  const age = new Date().getFullYear() - dob.getFullYear();
+
+  if (age < 18) {
+    this.setCustomValidity("You must be at least 18 years old");
+  } else {
+    this.setCustomValidity("");
+  }
+});
+
+
+(() => {
+  const form = document.querySelector("#bookingForm");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return;
+    }
+
+    document.getElementById("successMessage").textContent =
+      "Thanks for your interest! Our Tour expert will get back to you shortly!";
+    form.reset();
+    form.classList.remove("was-validated");
+  });
+})();

@@ -213,15 +213,15 @@
           <!-- LEFT: FORM -->
           <div class="home-form-section col-12 col-md-4 form-column">
             <h2 class="form-title mb-4">Book Your Dream Vacation</h2>
-            <form id="bookingForm">
+            <form class="needs-validation" novalidate id="bookingForm">
               <div class="mb-3">
                 <label class="form-label">Name</label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control" required />
               </div>
 
               <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control" />
+                <input type="email" class="form-control" required />
               </div>
 
               <div class="mb-3">
@@ -231,28 +231,35 @@
                   <select
                     class="form-select"
                     id="countryCode"
-                    style="max-width: 100px"
+                    style="max-width: 100px" required
                   ></select>
 
                   <input
                     type="tel"
                     class="form-control"
-                    id="phoneInput"
+                    id="phone"
                     placeholder="Enter phone number"
+                    required
+                    pattern="[0-9]{10}"
                   />
-                  <small class="error-text" id="phoneError"></small>
+                  <div class="invalid-feedback">
+                    Please enter a valid 10-digit phone number.
+                  </div>
                 </div>
               </div>
 
               <div class="mb-3">
                 <label class="form-label">Birthdate</label>
-                <input type="date" class="form-control" id="dobInput" />
-                <small class="error-text" id="dobError"></small>
+                <input type="date" class="form-control" id="dob"  required/>
+                <div class="invalid-feedback">
+                  You must be at least 18 years old.
+                </div>
               </div>
               <div class="mb-4">
                 <label class="form-label">Marital Status</label>
-                <select class="form-select">
-                  <option selected>Single</option>
+                <select class="form-select" required>
+                  <option></option>
+                  <option>Single</option>
                   <option>Married</option>
                   <option>Divorced</option>
                   <option>Widowed</option>
@@ -260,6 +267,7 @@
               </div>
               <div class="text-center">
                 <button class="btn btn-module px-5">Submit</button>
+                <p id="successMessage" class="success-text"></p>
               </div>
             </form>
           </div>
